@@ -91,3 +91,5 @@ $dotenv->load();
 
 1 create dropdowns for customer and products
     * create 2 new .php in de includes folder, which we can include in the homepageView.php
+
+// We have some problems getting connected to the richt database so we had te change our code a bit

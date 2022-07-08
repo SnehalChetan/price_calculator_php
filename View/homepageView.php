@@ -7,6 +7,9 @@
         <p><a href="index.php?page=info">To info page</a></p>
 
         <p>Put your content here.</p>
+
+
+
         <?php require 'includes/customerDropdown.php'?>
         <?php require 'includes/footer.php'?>
     </section>

@@ -6,21 +6,26 @@ $conn = new PDO($dsn, 'admin', 'admin1234');*/
 
 /*$sql = "SELECT * FROM customer";
 $all_customers = $conn->query($sql);*/
-print_r($customerList);
+// print_r($customerList);
+$customer = new Customer();
+$customList = $customer->getCustomerList();
+
 ?>
 
 
-<!--<form method="POST">
+<form method="POST">
     <label>Name of Customer:</label>
     <select name="Customer">
-
         <?php
-/*        while ($customer = $all_customers->fetch()){ */?>
-            <option value="<?php /*echo $customer['id'] */?>"><?php /*echo $customer['firstname'] . ' ' . $customer['lastname'] */?>
-            </option>
-        <?php /*} */?>
+        foreach ($customList as $customer):
+           print_r($customer);
+        ?>
+        <option value="<?= $customer['id'] ?>"><?= $customer['firstname'] . ' ' . $customer['lastname'] ?>
+        </option>-->
+
+        <?php endforeach; ?>
     </select>
     <br>
     <input type="submit" value="submit" name="submit">
-</form>-->
+</form>
 <br>

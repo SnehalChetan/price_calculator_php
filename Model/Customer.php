@@ -12,8 +12,11 @@ class Customer
 
     public function getCustomerList() : array{
         $this->conn = $this->dbConnect->makeConnection();
-        $sqlResult = $this->conn->query("select * from customer");
-        var_dump($sqlResult); exit;
+        $sqlResult = $this->conn->query("SELECT * FROM customer");
+//        $numRows = $sqlResult->num_rows;
+//        if ($numRows > 0) {
+//
+//        }
         return $sqlResult->fetchAll();
 
     }
