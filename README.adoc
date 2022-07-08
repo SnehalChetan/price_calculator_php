@@ -1,0 +1,87 @@
+= price_calculator_php
+
+Make a price calculator with the following entities:
+
+Customer (Firstname, Lastname)
+A customer group (Name)
+A product (product name, price in cents)
+Notice that the price is in cents stored as an integer, not as a float. This is because you should never store currency as a float. The reason for this is that they store the number with unexpected rounding behavior. For example, it will store 5 as 4.999999999999999999 (scientific fraction), making pennies appear and disappear, once you start to do calculations with multiple floats.
+
+Don't forget to divide by 100 in your PHP code to show the pennies again!
+
+A customer belongs to a customer group, which can also belong to another group (infinite). You don't need to worry for infinite loops in this exercise.
+
+Both a customer and a group can have a discount, which can be a percentage or a fixed amount.
+
+To calculate the price:
+For the customer group: In case of variable discounts look for highest discount of all the groups the user has.
+If some groups have fixed discounts, count them all up.
+Look which discount (fixed or variable) will give the customer the most value.
+Now look at the discount of the customer.
+In case both customer and customer group have a percentage, take the largest percentage.
+First subtract fixed amounts, then percentages!
+A price can never be negative.
+Importing the data
+With this exercise you can find an SQL file you can import into a database, the previous exercise has shown you the command to do this.
+If done successfully, will create 3 different tables (Customer, Group, Product)
+with some data inside it.
+
+   //TODO explore what is mvc ? why is everything a class? send help plz
+    //TODO make DB
+    //TODO make connection between controller/model and DB
+    //TODO display data to test connection
+    //TODO DO IT ALL ON HOMEPAGE FOR TESTING REFACTOR LATER
+
+
+=== COMMENTS
+
+===== USE ENV file
+
+Why should we use an env file in the application?
+To protect access to your application sensitive data, you must use the env file.
+The sensitive data can be API Credential, MySQL Database Credentials, Application Rest APIs, etc.
+If we use the env file in our application, no one can access our env file.
+
+
+*A web application filename that starts with a period (.) such as .env .htaccess is not accessible to any user*
+
+*env files* are also known as environment variables. An *environment variable is a variable
+whose value is set outside the program*, usually through functionality built into the operating system or microservice.
+An environment variable consists of a name/value pair and any number can be created and available for reference at any time.
+Command-line
+
+== installation
+
+https://getcomposer.org/download/
+and follow instructions
+
+===== in command prompt (cmd in search)
+go to file you are working in:
+
+ composer require vlucas/phpdotenv
+
+
+
+
+====== in PHP:
+* create a textfile in PHPSTORM (file, new): .ENV
+
+ MySQL_DB_HOST=localhost
+ MySQL_DB_USER_NAME=root
+ MySQL_DB_PASSWORD=
+ MySQL_DB_NAME=pricecalculatordatabase // naam van database waar je in werkt
+
+* in indexPHP:
+
+<?php
+declare(strict_types=1);
+
+require_once realpath(DIR . "/vendor/autoload.php");
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(DIR);
+$dotenv->load();
+
+=== GETTING STARTED
+
+1 create dropdowns for customer and products
+    * create 2 new .php in de includes folder, which we can include in the homepageView.php
