@@ -7,5 +7,9 @@
         <p><a href="index.php?page=info">To info page</a></p>
 
         <p>Put your content here.</p>
+        <?php require 'includes/footer.php'?>
     </section>
 <?php require 'includes/footer.php'?>
+
+
+
