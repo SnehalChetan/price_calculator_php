@@ -1,6 +1,6 @@
 = price_calculator_php
 
-Make a price calculator with the following entities:
+=== Make a price calculator with the following entities:
 
 Customer (Firstname, Lastname)
 A customer group (Name)
@@ -13,7 +13,7 @@ A customer belongs to a customer group, which can also belong to another group (
 
 Both a customer and a group can have a discount, which can be a percentage or a fixed amount.
 
-To calculate the price:
+===== To calculate the price:
 For the customer group: In case of variable discounts look for highest discount of all the groups the user has.
 If some groups have fixed discounts, count them all up.
 Look which discount (fixed or variable) will give the customer the most value.
@@ -26,22 +26,31 @@ With this exercise you can find an SQL file you can import into a database, the 
 If done successfully, will create 3 different tables (Customer, Group, Product)
 with some data inside it.
 
-   //TODO explore what is mvc ? why is everything a class? send help plz
-    //TODO make DB
-    //TODO make connection between controller/model and DB
-    //TODO display data to test connection
-    //TODO DO IT ALL ON HOMEPAGE FOR TESTING REFACTOR LATER
+
+=== Must-have features
+A dropdown where you can select a Product and a Customer and you get the basic information of the product + the price.
+Use a MVC pattern. You can use the MVC Boilerplate.
+Use separate objects for importing the entities with SQL, and for managing the entities.
+Nice to have features
+An actual login page for a customer
+A table where you can see in detail how the price is calculated
+The possibility to have different prices for different quantities (look, 1 EUR per item for 1, 0.9 EUR per item for 100, ...)
+A category page for the different products
+
+   //TODO explore what is mvc ? why is everything a class? send help plz   OK
+    //TODO make DB     OK
+    //TODO make connection between controller/model and DB     OK
+    //TODO display data to test connection     Ok
+    //TODO DO IT ALL ON HOMEPAGE FOR TESTING REFACTOR LATER     Ok
 
 
 === COMMENTS
 
 ===== USE ENV file
 
-Why should we use an env file in the application?
 To protect access to your application sensitive data, you must use the env file.
 The sensitive data can be API Credential, MySQL Database Credentials, Application Rest APIs, etc.
 If we use the env file in our application, no one can access our env file.
-
 
 *A web application filename that starts with a period (.) such as .env .htaccess is not accessible to any user*
 
@@ -59,9 +68,6 @@ and follow instructions
 go to file you are working in:
 
  composer require vlucas/phpdotenv
-
-
-
 
 ====== in PHP:
 * create a textfile in PHPSTORM (file, new): .ENV
