@@ -1,0 +1,56 @@
+class PrductGroups
+
+{
+    protected $id;
+    protected $name;
+    protected $parent_id;
+    protected $fixed_discount;
+    protected $variable_discount;
+
+
+    // GET METHODS
+
+    public function getId()
+    {
+        return  $this->id;
+    }
+
+    public function getName()
+    {
+        return  $this->name;
+    }
+
+    public function getParentId()
+    {
+        return  $this->parent_id;
+    }
+
+    public function getFixedDiscount()
+    {
+        return  $this->fixed_discount;
+    }
+
+    public function getVariableDiscount()
+    {
+        return  $this->variable_discount;
+    }
+
+
+
+
+
+
+
+
+
+
+    public function getCustomerList() : array{
+        $this->conn = $this->dbConnect->makeConnection();
+        $sqlResult = $this->conn->query("SELECT * FROM customer");
+//        $numRows = $sqlResult->num_rows;
+//        if ($numRows > 0) {
+//
+//        }
+        return $sqlResult->fetchAll();
+
+    }
