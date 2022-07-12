@@ -37,11 +37,13 @@ A table where you can see in detail how the price is calculated
 The possibility to have different prices for different quantities (look, 1 EUR per item for 1, 0.9 EUR per item for 100, ...)
 A category page for the different products
 
-   //TODO explore what is mvc ? why is everything a class? send help plz   OK
-    //TODO make DB     OK
-    //TODO make connection between controller/model and DB     OK
-    //TODO display data to test connection     Ok
-    //TODO DO IT ALL ON HOMEPAGE FOR TESTING REFACTOR LATER     Ok
+TODO
+
+* explore what is mvc ? why is everything a class? send help plz   OK
+* make DB     OK
+* make connection between controller/model and DB     OK
+* display data to test connection     Ok
+* DO IT ALL ON HOMEPAGE FOR TESTING REFACTOR LATER     Ok
 
 
 === COMMENTS
@@ -92,4 +94,7 @@ $dotenv->load();
 1 create dropdowns for customer and products
     * create 2 new .php in de includes folder, which we can include in the homepageView.php
 
-// We have some problems getting connected to the richt database so we had te change our code a bit
+// We have some problems getting connected to the right database, so we had te change our code a bit
+
+2 make cards to make it possible to order
+3 calculate the highest discount

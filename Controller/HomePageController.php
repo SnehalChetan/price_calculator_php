@@ -83,7 +83,7 @@ class HomePageController
         return $total;
     }
     public function render(){
-        $customerData = new Customer();
+        $customerData = new CustomerLoader();
         $customerList = $customerData->getCustomerList();
         include 'View/homepageView.php';
     }

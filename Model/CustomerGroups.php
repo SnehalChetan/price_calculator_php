@@ -1,19 +1,13 @@
 <?php
 
-class Customer
+class CustomerGroups
+
 {
     public int $id;
-    public string $firstname;
-    public string $lastname;
-    public int $group_id;
+    public string $name;
+    public int $parent_id;
     public int $fixed_discount;
     public int $variable_discount;
-
-    public function __construct(string $firstname, string $lastname)
-    {
-        $this->id = $id;
-        $this->name = $name;
-    }
 
 
     // GET METHODS
@@ -23,19 +17,14 @@ class Customer
         return  $this->id;
     }
 
-    public function getFirstName()
+    public function getName()
     {
-        return  $this->firstname;
+        return  $this->name;
     }
 
-    public function getLastName()
+    public function getParentId()
     {
-        return  $this->lastname;
-    }
-
-    public function getGroupId()
-    {
-        return  $this->group_id;
+        return  $this->parent_id;
     }
 
     public function getFixedDiscount()
@@ -54,19 +43,14 @@ class Customer
         $this->id = $id;
     }
 
-    public function setFirstName(string $firstname)
+    public function setName(string $name)
     {
-        $this->firstname = $firstname;
+        $this->name = $name;
     }
 
-    public function setLastName(string $lastname)
+    public function setParentId (int $parent_id)
     {
-        $this->lastname = $lastname;
-    }
-
-    public function setGroupId (int $group_id)
-    {
-        $this->group_id = $group_id;
+        $this->parent_id = $parent_id;
     }
 
     public function setFixedDiscount(int $fixed_discount)
@@ -79,5 +63,12 @@ class Customer
         $this->variable_discount = $variable_discount;
     }
 
-
 }
+
+
+
+
+
+
+
+
