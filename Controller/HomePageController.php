@@ -7,7 +7,7 @@ class HomePageController
         new DbConnection();
     }
     public function render(){
-        $customerData = new Customer();
+        $customerData = new CustomerLoader();
         $customerList = $customerData->getCustomerList();
         include 'View/homepageView.php';
     }

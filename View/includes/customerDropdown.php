@@ -7,7 +7,7 @@ $conn = new PDO($dsn, 'admin', 'admin1234');*/
 /*$sql = "SELECT * FROM customer";
 $all_customers = $conn->query($sql);*/
 // print_r($customerList);
-$customer = new Customer();
+$customer = new CustomerLoader();
 $customList = $customer->getCustomerList();
 
 ?>
