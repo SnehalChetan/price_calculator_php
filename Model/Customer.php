@@ -9,7 +9,7 @@ class Customer
     public int $fixed_discount;
     public int $variable_discount;
 
-    public function __construct(string $firstname, string $lastnamename)
+    public function __construct(string $firstname, string $lastname)
     {
         $this->id = $id;
         $this->name = $name;
