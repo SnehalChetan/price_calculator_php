@@ -21,7 +21,7 @@ class HomePageController
     /**
      * get products name from database and display them to homepage view
      */
-    public function render()
+    public function render():void
     {
         $productList = $this->productData->getProductList();
         if (isset($_POST['submit']) && $_POST['randcheck'] == $_SESSION['rand']) {
@@ -47,16 +47,15 @@ class HomePageController
                 $qty = 0;
                 $this->addProductToCartSesstion($qty);
             }
-            /*$_SESSION['cart'] = array_map("unserialize", array_unique(array_map("serialize", $_SESSION['cart'])));
-             }*/
             include 'View/cartView.php';
             $productList = $this->productData->getProductList();
             include 'View/homepageView.php';
         } else {
+            include 'View/cartView.php';
             $productList = $this->productData->getProductList();
             include 'View/homepageView.php';
         }
-        include 'View/cartView.php';
+
     }
 
     /**
@@ -72,17 +71,6 @@ class HomePageController
             "price" => number_format(($productDetails[0]["price"] / 100), 2, '.', ' ')
         );
         $_SESSION['cart'][] = $product;
-        // array_push($_SESSION['cart'],$product);
     }
 
-    /**
-     * @return void
-     * make summation of price of all products in cart
-
-    public function priceSum(): float
-    {
-        $cartPrice = array_column($_SESSION['cart'], 'price');
-        $total = array_sum($cartPrice);
-        return $total;
-    } */
 }

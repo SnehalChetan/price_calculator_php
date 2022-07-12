@@ -1,7 +1,6 @@
-<?php include_once 'includes/header.php' ?>
-<?php include_once 'Controller/Cart.php'; ?>
+<?php // include_once 'Controller/Cart.php'; ?>
 <?php
-$cartController = new Cart();
+//$cartController = new Cart();
 // $cartController->addToCart();
 ?>
     <!-- this is the view, try to put only simple if's and loops here.
@@ -31,6 +30,9 @@ $cartController = new Cart();
 
         <div class="wrapper">
             <div class="container">
+                <div class="row">
+                    <div class="col"><h4><b>Products </b></h4></div>
+                </div>
                 <?php
                 $numOfCols = 4;
                 $rowCount = 0;

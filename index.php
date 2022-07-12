@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require 'View/includes/header.php';
 
 require('vendor/autoload.php');
 require 'Controller/HomePageController.php';
