@@ -1,11 +1,11 @@
 class PrductGroups
 
 {
-    protected $id;
-    protected $name;
-    protected $parent_id;
-    protected $fixed_discount;
-    protected $variable_discount;
+    public string $id;
+    public string $name;
+    public int $parent_id;
+    public int $fixed_discount;
+    public int git $variable_discount;
 
 
     // GET METHODS
@@ -44,13 +44,3 @@ class PrductGroups
 
 
 
-    public function getCustomerList() : array{
-        $this->conn = $this->dbConnect->makeConnection();
-        $sqlResult = $this->conn->query("SELECT * FROM customer");
-//        $numRows = $sqlResult->num_rows;
-//        if ($numRows > 0) {
-//
-//        }
-        return $sqlResult->fetchAll();
-
-    }
