@@ -1,11 +1,13 @@
-class PrductGroups
+<?php
+
+class CustomerGroups
 
 {
     public string $id;
     public string $name;
     public int $parent_id;
     public int $fixed_discount;
-    public int git $variable_discount;
+    public int $variable_discount;
 
 
     // GET METHODS
@@ -35,7 +37,7 @@ class PrductGroups
         return  $this->variable_discount;
     }
 
-
+}
 
 
 
