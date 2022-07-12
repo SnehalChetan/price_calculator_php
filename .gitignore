@@ -1,0 +1,6 @@
+.idea
+.config.env.local
+ config.env.sample
+ .gitignore
+ /vendor
+ ./.idea

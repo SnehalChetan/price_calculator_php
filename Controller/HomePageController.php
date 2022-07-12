@@ -82,4 +82,9 @@ class HomePageController
         $total = array_sum($cartPrice);
         return $total;
     }
+    public function render(){
+        $customerData = new Customer();
+        $customerList = $customerData->getCustomerList();
+        include 'View/homepageView.php';
+    }
 }

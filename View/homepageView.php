@@ -66,5 +66,10 @@
             </div>
         </div>
         <p>Put your content here.</p>
+
+
+
+        <?php require 'includes/customerDropdown.php'?>
+        <?php require 'includes/footer.php'?>
     </section>
 <?php include 'includes/footer.php' ?>
