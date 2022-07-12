@@ -72,5 +72,14 @@ class HomePageController
         );
         $_SESSION['cart'][] = $product;
     }
-
+    /**
+     * @return void
+     * make summation of price of all products in cart
+     **/
+    public function priceSum()
+    {
+        $cartPrice = array_column($_SESSION['cart'], 'price');
+        $total = array_sum($cartPrice);
+        return $total;
+    }
 }
