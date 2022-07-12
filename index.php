@@ -13,7 +13,8 @@ if (!isset($_SESSION)) {
     $_SESSION["cart"] = [];
 }
 
-
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__), 'config.env.local');
+$dotenv->load();
 
 $controller = new HomePageController();
 $controller->render();

@@ -1,6 +1,7 @@
-<?php // include_once 'Controller/Cart.php'; ?>
 <?php
-//$cartController = new Cart();
+include_once 'Controller/Cart.php'; ?>
+<?php
+$cartController = new Cart();
 // $cartController->addToCart();
 ?>
     <!-- this is the view, try to put only simple if's and loops here.

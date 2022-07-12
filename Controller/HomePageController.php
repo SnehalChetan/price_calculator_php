@@ -22,7 +22,9 @@ class HomePageController
      * get products name from database and display them to homepage view
      */
     public function render():void
-    {
+    {   $customerData = new CustomerLoader();
+        $customerList = $customerData->getCustomerList();
+        //include 'View/homepageView.php';
         $productList = $this->productData->getProductList();
         if (isset($_POST['submit']) && $_POST['randcheck'] == $_SESSION['rand']) {
             /*  if ($_GET['submit'] == 'product') {*/
@@ -82,9 +84,5 @@ class HomePageController
         $total = array_sum($cartPrice);
         return $total;
     }
-    public function render(){
-        $customerData = new CustomerLoader();
-        $customerList = $customerData->getCustomerList();
-        include 'View/homepageView.php';
-    }
+
 }
